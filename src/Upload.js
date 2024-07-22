@@ -56,9 +56,10 @@ const Upload = () => {
                     <p>MP3 IPFS Hash: {response.mp3Hash}</p>
                     <p>JPEG IPFS Hash: {response.jpegHash}</p>
                 </div>
+
+              </div>
             )}
-        </div>
-    );
+        );
 };
 
 export default Upload;
