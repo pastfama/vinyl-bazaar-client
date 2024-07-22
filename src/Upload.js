@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import {EmptyItem} from 'devextreme-react/form';
 
 const Upload = () => {
     const [mp3File, setMp3File] = useState(null);
@@ -37,11 +38,11 @@ const Upload = () => {
         <div>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label>MP3 File:</label>
+                    <label>MP3 File:</label><EmptyItem/>
                     <input type="file" name="mp3" accept=".mp3" onChange={handleFileChange} required />
                 </div>
                 <div>
-                    <label>JPEG File:</label>
+                    <label>JPEG File:</label><EmptyItem/>
                     <input type="file" name="jpeg" accept=".jpeg,.jpg" onChange={handleFileChange} required />
                 </div>
                 <button type="submit">Upload</button>
