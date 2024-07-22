@@ -37,24 +37,26 @@ const Upload = () => {
         <div>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label>MP3 File:</label>
+                    formData=this.{formData};
+                    <label>MP3 File:&nbsp;></label>
                     <input type="file" name="mp3" accept=".mp3" onChange={handleFileChange} required />
+                    <EmptyItem /> 
                 </div>
                 <div>
-                    <label>JPEG File:</label>
+                    <label>JPEG File:&nbsp;></label>
                     <input type="file" name="jpeg" accept=".jpeg,.jpg" onChange={handleFileChange} required />
-                </div>
+                </div>      
                 <button type="submit">Upload</button>
-            </form>
             {response && (
                 <div>
                     <h3>Upload Successful</h3>
                     <p>MP3 IPFS Hash: {response.mp3Hash}</p>
                     <p>JPEG IPFS Hash: {response.jpegHash}</p>
                 </div>
+
+              </div>
             )}
-        </div>
-    );
+        );
 };
 
 export default Upload;
