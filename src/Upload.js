@@ -38,8 +38,11 @@ const Upload = () => {
         <div>
             <form onSubmit={handleSubmit}>
                 <div>
+                <Form
+                    formData=this.{formData};
                     <label>MP3 File:<EmptyItem /></label>
                     <input type="file" name="mp3" accept=".mp3" onChange={handleFileChange} required />
+                        </Form>
                 </div>
                 <div>
                     <label>JPEG File:<EmptyItem /></label>
